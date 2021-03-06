@@ -101,5 +101,16 @@
     "captionRight": 620,
     "foregroundColor": "#0eb8ba",
     "backgroundImage": "nyc.png"
+  },
+  "Custom": {
+    "pattern": "bars",
+    "foregroundColor": "black",
+    "backgroundColor":"#95f0df",
+    "captionAlign": "center",
+    "captionTop": 20,
+    "waveColor":"white",
+    "captionFont":"bold 60px 'Source Sans Pro'",
+    "waveTop":300
   }
+
 }

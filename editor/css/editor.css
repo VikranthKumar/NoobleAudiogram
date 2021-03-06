@@ -158,12 +158,13 @@ input[type='text'] {
 
 #preview-label {
   position: absolute;
-  top: 0;
-  left: 0;
+  margin: auto;
+  bottom: 0;
+  margin: auto;
   padding: 0.5rem;
-  text-transform: uppercase;
-  opacity: 0.2;
-  font-size: 28px;
+  font-size: 25px;
+  text-align: center;
+  color: white;
 }
 
 #canvas,
