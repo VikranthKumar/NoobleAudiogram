@@ -1,6 +1,7 @@
 var d3 = require("d3"),
     patterns = require("./patterns.js"),
     textWrapper = require("./text-wrapper.js");
+    $ = require("jquery")
 
 module.exports = function(t) {
 
@@ -66,12 +67,19 @@ module.exports = function(t) {
     renderer.theme(t);
   }
 
+  $(document).ready(function() {
+    $(function () {
+      //Do my stuff
+
   document.getElementById('inp').onchange = function(e) {
     var img = new Image();
     img.onload = draw;
     img.onerror = failed;
     img.src = URL.createObjectURL(this.files[0]);
   };
+    });
+});
+
   function draw() {
   var canvas = document.getElementById('canvasId');
   const canvasContext = canvas.getContext("2d");
