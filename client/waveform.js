@@ -38,7 +38,7 @@ module.exports = function(file, cb) {
   var fileReader = new FileReader();
 
   var close = function(err, data) {
-    console.warn(err);
+    //console.warn(err);
     ctx.close();
     cb(err, data);
   };

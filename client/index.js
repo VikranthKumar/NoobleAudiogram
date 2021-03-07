@@ -184,7 +184,22 @@ function initialize(err, themesWithImages) {
 
   d3.select("#submit").on("click", submitted);
 
+  d3.select('#inp').on('change',function(){
+
+  console.log("draw called");
+  var url = URL.createObjectURL(this.files[0]);
+    var img = new Image();
+    img.onload = function() {
+      var context = d3.select("canvas").node().getContext("2d");
+      context.drawImage(img,480, 200, 300, 300);   
+    }
+    img.src = url;
+ 
+
+  })
+
 }
+
 
 function updateAudioFile() {
 
