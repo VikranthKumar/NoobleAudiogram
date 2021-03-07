@@ -9,6 +9,9 @@
     <link href="/css/base.css" rel="stylesheet" type="text/css">
     <link href="/css/editor.css" rel="stylesheet" type="text/css">
     <link href="/fonts/fonts.css" rel="stylesheet" type="text/css">
+    <script defer  src="/js/bundle.js"></script>
+    <!-- Force load custom fonts -->
+    <script defer src="/fonts/fonts.js"></script>
   </head>
   <body class="loading">
     <div class="container">
@@ -37,7 +40,7 @@
           <input id="input-caption" name="caption" type="text" autocomplete="off" placeholder="Add a caption" />
         </div>
         <div class="row form-row" id="row-theme">
-          <input type="file" id="inp">
+          <input type="file" id="inp" onchange="onChangerer()">
           <!-- <img id="output_image" height=50px width=50px /> -->
         </div>
         <div id="preview">
@@ -94,9 +97,12 @@
         </div>
       </div><!-- #loaded -->
     </div><!-- .container -->
-    <script src="/js/bundle.js"></script>
-    <!-- Force load custom fonts -->
-    <script src="/fonts/fonts.js"></script>
+   <script>
+   function onChangerer(){
+    console.log("sdfsdf"); 
+    onChanger();
+   }
+   </script>
 
   </body>
 </html>

@@ -1,7 +1,6 @@
 var d3 = require("d3"),
     patterns = require("./patterns.js"),
     textWrapper = require("./text-wrapper.js");
-    $ = require("jquery")
 
 module.exports = function(t) {
 
@@ -66,40 +65,6 @@ module.exports = function(t) {
   if (t) {
     renderer.theme(t);
   }
-
-  $(document).ready(function() {
-    $(function () {
-      //Do my stuff
-
-  document.getElementById('inp').onchange = function(e) {
-    var img = new Image();
-    img.onload = draw;
-    img.onerror = failed;
-    img.src = URL.createObjectURL(this.files[0]);
-  };
-    });
-});
-
-  function draw() {
-  var canvas = document.getElementById('canvasId');
-  const canvasContext = canvas.getContext("2d");
-const ratio = this.width / this.height;
-let newWidth = canvas.width;
-let newHeight = newWidth / ratio;
-if (newHeight < canvas.height) {
-newHeight = canvas.height;
-newWidth = newHeight * ratio;
-}
-const xOffset = newWidth > canvas.width ? (canvas.width - newWidth) / 2 : 0;
-const yOffset =
-newHeight > canvas.height ? (canvas.height - newHeight) / 2 : 0;
-canvasContext.drawImage(this,480, 200, 300, 300);
-}
-function failed() {
-  console.error("The provided file couldn't be loaded as an Image media");
-}
-
-
   return renderer;
 
 }

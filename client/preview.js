@@ -106,6 +106,23 @@ function loadAudio(f, cb) {
 
 }
 
+function onChanger(){
+  var img = new Image();
+  img.onload = draw;
+  img.onerror = failed;
+  img.src = URL.createObjectURL(this.files[0]);
+}
+
+
+function draw() {
+  context.drawImage(this,480, 200, 300, 300);
+}
+function failed() {
+  console.error("The provided file couldn't be loaded as an Image media");
+}
+
+
+
 module.exports = {
   caption: _caption,
   theme: _theme,
